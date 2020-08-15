@@ -1,31 +1,16 @@
 #pragma once
-#include <vector>
+
+#include "mastermindVisual.h"
 #include <string>
 
-using namespace std;
 
-int incrementByValueNumTimes(int startValue, int increment, int numTimes);
+std::string randomizeString(int n, char lower, char upper);
 
-void incrementByValueNumTimesRef(int &startValue, int increment, int numTimes);
+int countChar(std::string str, char ch);
 
-void swapNumbers(int &a, int &b);
+int checkCharacters(std::string code, std::string guess);
+int checkCharactersAndPosition(std::string code, std::string guess);
 
-void randomizeVector(vector<int>& vec, int n);
-
-void sortVector(vector<int>& vec);
-
-double medianOfVector(vector<int>& vec);
-
-struct Student {
-
-    string name;
-    string studyProgram;
-    int age;
-
-};
-
-void printStudent(Student student);
-
-string randomizeString(int n, char lower, char upper);
-
-string readInputToString(int n, char lower, char upper);
+void addGuess(MastermindWindow &mwin, const string code,const int size, const char startLetter, const int round);
+void hideCode(MastermindWindow &mwin,const int size);
+void addFeedback(MastermindWindow &mwin,const int correctPosition, const int correctCharacter, const int size, const int round);

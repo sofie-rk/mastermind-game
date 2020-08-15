@@ -6,8 +6,11 @@
 
 // This program outputs the message "Hello, World!" to the monitor
 
-#include "test.h"
-#include "utilities.h"
+
+#include "mastermindGame.h"
+#include "Graph.h"
+#include "Simple_window.h"
+
 
 //------------------------------------------------------------------------------'
 
@@ -16,11 +19,10 @@ int main()
 {
 	srand(static_cast<unsigned int>(time(nullptr)));
 
-	testString();
+	playMasterMind();
 
-	string resultString = readInputToString(8, 'A', 'F');
+	Graph_lib::gui_main();
 
-	cout << resultString << endl;
 }
 
 //------------------------------------------------------------------------------
