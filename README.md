@@ -1,2 +1,3 @@
-# mastermind-game
-Mastermind game
+# Mastermind game
+
+Simple visual mastermind game in C++.
